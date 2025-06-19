@@ -1,0 +1,20 @@
+--- dmenu.c
++++ dmenu.c
+@@ -523,7 +602,7 @@ keypress(XKeyEvent *ev)
+ 		strncpy(text, sel->text, sizeof text - 1);
+ 		text[sizeof text - 1] = '\0';
+ 		cursor = strlen(text);
+-		match();
++		fuzzymatch();
+ 		break;
+ 	}
+ 	drawmenu();
+@@ -665,7 +744,7 @@ setup(void)
+ 	}
+ 	promptw = (prompt && *prompt) ? TEXTW(prompt) : 0;
+ 	inputw = MIN(inputw, mw/3);
+-	match();
++	fuzzymatch();
+ 
+ 	/* create menu window */
+ 	swa.override_redirect = True;
