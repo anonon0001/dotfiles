@@ -20,4 +20,5 @@ export EDITOR=vim
 export VISUAL=vimbind
 set completion-ignore-case on
 shopt -s autocd
+shopt -s cdspell
 set -o vi
